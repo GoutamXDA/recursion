@@ -6,6 +6,7 @@ public class Nto1 {
 		int number=5;
 		numberPrint(number);
 		numberPrintReverse(number);
+		numberPrintBoth(number);
 	}
 	// decreasing order
 	public static void numberPrint(int number) {
@@ -21,6 +22,16 @@ public class Nto1 {
 			return ;
 		}
 		numberPrintReverse(number-1);
+		System.out.println(number);
+	}
+	
+	// both
+	public static void numberPrintBoth(int number) {
+		if(number==0) {
+			return ;
+		}
+		System.out.println(number);
+		numberPrintBoth(number-1);
 		System.out.println(number);
 	}
 	
