@@ -7,6 +7,15 @@ public class Find {
 		System.out.println(checkElement(nums,0,0));
 		
 		System.out.println(findIndex(nums,0,0));
+		
+		System.out.println(findIndexLast(nums,23,nums.length-1));
+	}
+
+	private static int findIndexLast(int[] nums, int target, int index) {
+		if(index==-1) return -1;
+		
+		if(nums[index]==target) return index;
+		else return findIndexLast(nums, target, index-1);
 	}
 
 	private static int findIndex(int[] nums, int target, int index) {
