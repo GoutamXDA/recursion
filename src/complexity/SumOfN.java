@@ -7,6 +7,9 @@ public class SumOfN {
 		int result=sum(number);
 		System.out.println(result);
 		
+		int result2=pairSumSequence(number);
+		System.out.println(result2);
+		
 	}
 	public static int sum(int n) {
 		if(n<=0) return 0;
@@ -20,4 +23,17 @@ public class SumOfN {
 	 *    sum(1);
 	 *     sum(0);
 	 */
+	
+	public static int pairSumSequence(int n) {
+        int sum = 0;
+        for (int i = 0; i <n; i++) {
+            sum += pairSum(i, i + 1);
+        }
+        return sum;
+    }
+
+    private static int pairSum(int a, int b) {
+        // Correcting the pair sum calculation
+        return a + b;
+    }
 }
